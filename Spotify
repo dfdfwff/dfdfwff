@@ -1,0 +1,19 @@
+name: Spotify免广告
+desc: 通过将Spotify相关域名走直连
+
+proxy-groups:
+ - name: Spotify
+   type: select
+   proxies:
+    - DIRECT
+
+rules:
+ - DOMAIN-SUFFIX,heads-ak-spotify-com.akamaized.net,DIRECT
+ - DOMAIN-SUFFIX,audio4-ak-spotify-com.akamaized.net,DIRECT
+ - DOMAIN-SUFFIX,audio-akp-bbr-spotify-com.akamaized.net,DIRECT
+ - DOMAIN-KEYWORD,-spotify-com,DIRECT
+ - DOMAIN-KEYWORD,spotify.com,DIRECT
+ - DOMAIN-SUFFIX,spoti.fi,DIRECT
+ - DOMAIN-SUFFIX,spotify.com,DIRECT
+ - DOMAIN-SUFFIX,scdn.co,DIRECT
+ - DOMAIN-SUFFIX,pscdn.co,DIRECT
